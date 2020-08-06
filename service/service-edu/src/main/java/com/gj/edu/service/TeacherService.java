@@ -1,7 +1,9 @@
 package com.gj.edu.service;
 
-import com.gj.edu.entity.Teacher;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.gj.edu.entity.Teacher;
+import com.gj.edu.query.TeacherQuery;
 
 /**
  * <p>
@@ -13,4 +15,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface TeacherService extends IService<Teacher> {
 
+    void pageQuery(Page<Teacher> pageParam, TeacherQuery teacherQuery);
 }

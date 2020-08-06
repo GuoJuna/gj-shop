@@ -36,6 +36,7 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>-->
+
         <dependency>
             <groupId>com.gj</groupId>
             <artifactId>service-base</artifactId>
