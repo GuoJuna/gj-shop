@@ -1,7 +1,8 @@
 # gj-shop
 
 后端基于SpringBoot+SpringCloud+MybatisPlus+Redis  
-前端使用Vue+element-ui+axios+node.js
+前端使用Vue+element-ui+axios+node.js  
+
 [前端地址](https://github.com/GuoJuna/gj-shop-admin)
 
 
