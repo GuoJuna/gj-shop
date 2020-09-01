@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
  * @date 2020/8/31 21:18
  * @email 864350301@qq.com
  */
-@RequestMapping("eudService/user")
+@RequestMapping("eduService/user")
 @RestController
 @CrossOrigin
 public class LoginController {
