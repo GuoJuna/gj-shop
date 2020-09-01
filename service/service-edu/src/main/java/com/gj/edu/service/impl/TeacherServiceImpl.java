@@ -46,6 +46,7 @@ public class TeacherServiceImpl extends ServiceImpl<TeacherMapper, Teacher> impl
         if(ObjectUtils.isNotEmpty(end)){
             queryWrapper.le("gmt_create", end);
         }
+        queryWrapper.orderByDesc("gmt_create");
         baseMapper.selectPage(pageParam, queryWrapper);
     }
 }

@@ -22,23 +22,24 @@ import java.util.List;
  * @author GuoJun
  * @since 2020-08-05
  */
+@Api("讲师管理")
 @RestController
 @RequestMapping("/edu/teacher")
-@Api(description="讲师管理")
+@CrossOrigin
 public class TeacherController {
 
     @Autowired
     private TeacherService teacherService;
 
     @ApiOperation(value = "分页讲师列表")
-    @GetMapping("{page}/{limit}")
+    @PostMapping("{page}/{limit}")
     public R pageList(
             @ApiParam(name = "page", value = "当前页面",required = true)
             @PathVariable Long page,
             @ApiParam(name = "limit", value = "每页记录数", required = true)
             @PathVariable Long limit,
             @ApiParam(name = "teacherQuery", value = "查询对象", required = true)
-            TeacherQuery teacherQuery){
+            @RequestBody TeacherQuery teacherQuery){
         Page<Teacher> pageParam = new Page<>(page, limit);
         teacherService.pageQuery(pageParam,teacherQuery);
         List<Teacher> records = pageParam.getRecords();
@@ -84,6 +85,7 @@ public class TeacherController {
      * @param id
      * @return
      */
+    @GetMapping("{id}")
     public R getById(
             @ApiParam(name = "id", value = "讲师", required = true)
             @PathVariable String id){
